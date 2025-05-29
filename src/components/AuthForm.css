@@ -1,0 +1,148 @@
+/* src/components/AuthForm.css */
+body { /* Apply to body for full page background if needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f2f5; /* A light background like in the image */
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* If not applying to body, set height for centering */
+  /* width: 100%; min-height: 100vh; */
+}
+
+.auth-form {
+  background-color: #364958; /* Dark teal background from image */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 360px;
+  text-align: center;
+  color: #ffffff; /* White text */
+}
+
+.logo-container {
+  margin-bottom: 20px;
+  font-size: 2.5em; /* Adjust size as needed */
+  font-weight: bold;
+}
+
+.logo-text-main {
+  color: #ffffff; /* White */
+}
+
+.logo-text-accent {
+  color: #61dafb; /* A contrasting accent, adjust to match the X in logo */
+  /* You might need to use a more complex SVG or image for the exact logo X */
+}
+
+
+.auth-form h2 {
+  margin-bottom: 25px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  position: relative; /* Add this for positioning the eye icon */
+}
+
+.form-group input {
+  width: calc(100% - 20px); /* Full width minus padding */
+  padding: 12px 10px;
+  border: 1px solid #5a7284;
+  border-radius: 5px;
+  background-color: #e8f0fe;
+  color: #333;
+  font-size: 1rem;
+}
+
+/* Make password input padding accommodate the icon */
+.form-group input[type="password"],
+.form-group input[type="text"].password-input { /* Add class for when type is text */
+  padding-right: 40px; /* Make space for the icon */
+}
+
+
+.password-toggle-btn {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Adjust as needed */
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #555; /* Icon color */
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.password-toggle-btn:focus {
+  outline: none;
+}
+
+.password-toggle-btn svg { /* If using SVG icons */
+  width: 20px;
+  height: 20px;
+}
+
+
+.form-group input:focus {
+  outline: none;
+  border-color: #61dafb; /* Accent color on focus */
+  box-shadow: 0 0 0 2px rgba(97, 218, 251, 0.2);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #5289a1; /* Button color from image */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #427185; /* Darker shade on hover */
+}
+
+.switch-form-link {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #bdc3c7; /* Light grey for the link text */
+}
+
+.switch-form-link a {
+  color: #61dafb; /* Accent color for the link */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.switch-form-link a:hover {
+  text-decoration: underline;
+}
+
+.error-message {
+  color: #e74c3c; /* Red for errors */
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.success-message {
+  color: #2ecc71; /* Green for success */
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
